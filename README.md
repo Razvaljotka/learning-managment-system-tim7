@@ -1,59 +1,119 @@
-# LearningManagmentSystemTim7
+# Learning Management System (LMS)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+A comprehensive web-based Learning Management System designed for universities, providing administration capabilities for staff, students, and study programs while serving as the university's official website.
 
-## Development server
+## 🎯 Project Overview
 
-To start a local development server, run:
+This LMS application enables management of university personnel, students, and academic programs through a web interface that supports high concurrent user loads. The system serves multiple user types including students, teachers, administrative staff, administrators, and unregistered visitors.
+
+## 🏗️ Architecture
+
+- **Frontend**: Angular (TypeScript)
+- **Backend**: Java Spring Boot
+- **Architecture**: Web-based application with RESTful APIs
+
+## 👥 User Roles & Capabilities
+
+### Unregistered Users
+
+- Browse university information (contact, location, rector details)
+- View faculty pages and study programs
+- Access course syllabi and materials
+- User registration
+
+### Students
+
+- View current courses and announcements
+- Access study history and grades
+- Register for exams
+- Track ECTS credits and GPA
+
+### Teachers
+
+- Manage course syllabi and schedules
+- Create evaluation instruments (projects, tests, quizzes)
+- Manage course announcements
+- View student lists and search functionality
+- Grade student exams (within 15-day window)
+
+### Administrative Staff
+
+- Student enrollment management
+- Document and certificate issuance
+- Schedule management for classes and exams
+- Library management
+- Inventory management
+
+### Administrators
+
+- User administration
+- Study program management
+- System configuration
+- Staff management
+
+## 🔧 Technical Features
+
+- **Data Export**: XML and PDF export capabilities for student/teacher data
+- **Bulk Import**: XML-based evaluation results import with validation
+- **RDF Integration**: One entity stored as RDF triples with full CRUD operations
+- **Search Functionality**: Advanced student search capabilities
+- **Document Management**: PDF export for evaluation results
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (for Angular frontend)
+- Java JDK 11+ (for Spring Boot backend)
+- Maven (for dependency management)
+
+### Frontend Setup (Angular)
 
 ```bash
+cd frontend/lms-t7
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Access at: `http://localhost:4200`
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Backend Setup (Spring Boot)
 
 ```bash
-ng generate component component-name
+cd backend/lms-t7
+mvn clean install
+mvn spring-boot:run
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+API available at: `http://localhost:8080`
 
-```bash
-ng generate --help
+## 📁 Project Structure
+
+```
+learning-management-system-tim7/
+├── frontend/lms-t7/          # Angular application
+│   ├── src/app/              # Angular components and services
+│   └── package.json          # Frontend dependencies
+└── backend/lms-t7/           # Spring Boot application
+    ├── src/main/java/        # Java source code
+    └── pom.xml               # Backend dependencies
 ```
 
-## Building
+## 🎓 Academic Requirements
 
-To build the project run:
+This project fulfills university coursework requirements including:
 
-```bash
-ng build
-```
+- Multi-tier web application architecture
+- Role-based access control
+- Data persistence and management
+- Document processing (XML/PDF)
+- RDF/Semantic web integration
+- Concurrent user support
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📝 Development Status
 
-## Running unit tests
+🚧 **Currently in development** - This is an active university project implementing a full-featured Learning Management System.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+_This project is part of academic coursework and implements industry-standard practices for educational technology systems._
