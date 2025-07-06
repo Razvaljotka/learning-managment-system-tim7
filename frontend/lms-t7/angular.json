@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "learning-managment-system-tim7": {
+    "lms-t7": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/learning-managment-system-tim7",
+            "outputPath": "dist/lms-t7",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "learning-managment-system-tim7:build:production"
+              "buildTarget": "lms-t7:build:production"
             },
             "development": {
-              "buildTarget": "learning-managment-system-tim7:build:development"
+              "buildTarget": "lms-t7:build:development"
             }
           },
           "defaultConfiguration": "development"
